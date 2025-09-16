@@ -2,22 +2,13 @@ ___author___ = "Kuvykin N.D"
 
 import csv
 
-def write_to_csv(file_prefix: str, **datasets) -> None:
+def write_to_csv(data, filename) -> None:
     """
     Функция записывает данные в csv-файлы.
     """
-
-    # name - название перемнной(key), data - данные из этой переменной, dataset - то что передается
-    for name, data in datasets.items():
-        filename = f"{file_prefix}_{name}.csv"
-        with open(filename, 'w', newline='', encoding='utf-8') as csvfile:
-            csv_writer = csv.writer(csvfile)
-            for row in data:
-                # если число -> упакуем в список
-                if not isinstance(row, (list, tuple, set)):
-                    csv_writer.writerow([row])
-                else:
-                    csv_writer.writerow(row)
+    with open(filename, 'w', newline='', encoding='utf-8') as file:
+        writer = csv.writer(file)
+        writer.writerow(data)
 
 
 def write_to_md(func_name: str, run_time: float, filename: str = "time_output.md"):

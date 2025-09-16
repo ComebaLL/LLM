@@ -75,13 +75,17 @@ def unique_ndarray_creator(n: float, a: float, b: float) -> np.ndarray:
 
     # Создаем все четные числа в интервале
     # проверку размера от start до end чтобы размер был в "размуных" пределах
-    if (n <= 10**6):
+    if n <= 10**6:
         start = a if a % 2 == 0 else a + 1
         end = b if b % 2 == 0 else b - 1
         all_even_numbers = np.arange(start, end + 1, 2)
+        result = np.random.choice(all_even_numbers, size = n, replace = False)
     else:
-        
+        while len(result) < n:
+            num = random.randint(a, b) # генерация случайного числав интервале
 
-    result = np.random.choice(all_even_numbers, size = n, replace = False)
-
+        if num % 2 == 0 and num not in result: # проверяем что число четное и его нет в списке
+            result.append(num)
+        result = np.random.choice(all_even_numbers, size = n, replace = False)
+    
     return result

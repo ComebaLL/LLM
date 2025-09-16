@@ -32,7 +32,7 @@ def main(*args, **kwargs):
 
     print(f"сумма значений массива после применения формулы нормализации {list_normal_sum:.4f}")
 
-    write_to_csv("output", list_cllection=list_cllection)
+    write_to_csv(list_cllection, "output")
 
 
 if __name__ == "__main__":

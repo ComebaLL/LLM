@@ -17,3 +17,15 @@ Finished unique_ndarray_creator                             in 0.0464 seconds
 Finished unique_list_creator                                in 0.0142 seconds
 Finished unique_set_creator                                 in 0.0040 seconds
 Finished unique_ndarray_creator                             in 0.0433 seconds
+Finished unique_list_creator                                in 0.0036 seconds
+Finished unique_set_creator                                 in 0.0010 seconds
+Finished unique_ndarray_creator                             in 0.1782 seconds
+Finished unique_list_creator                                in 0.0036 seconds
+Finished unique_set_creator                                 in 0.0009 seconds
+Finished unique_ndarray_creator                             in 0.0125 seconds
+Finished unique_list_creator                                in 0.0035 seconds
+Finished unique_set_creator                                 in 0.0010 seconds
+Finished unique_ndarray_creator                             in 0.0127 seconds
+Finished unique_list_creator                                in 0.0036 seconds
+Finished unique_set_creator                                 in 0.0011 seconds
+Finished unique_ndarray_creator                             in 0.0130 seconds
