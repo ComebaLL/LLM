@@ -9,17 +9,19 @@ def test_normalize_data_empty_list():
     """Тест пустого списка"""
     assert normalize_data([]) == []
 
+
+#todo переделать тесты так как с одинаковыми значениями = 0
 def test_normalize_data_single_element():
     """Тест списка с одним элементом"""
-    assert normalize_data([5]) == [1.0]
-    assert normalize_data([0]) == [1.0]
-    assert normalize_data([-10]) == [1.0]
+    assert normalize_data([5]) == [0.0]
+    assert normalize_data([0]) == [0.0]
+    assert normalize_data([-10]) == [0.0]
 
 def test_normalize_data_identical_values():
     """Тест списка с одинаковыми значениями"""
-    assert normalize_data([7, 7, 7, 7]) == [1.0, 1.0, 1.0, 1.0]
-    assert normalize_data([0, 0, 0]) == [1.0, 1.0, 1.0]
-    assert normalize_data([-5, -5, -5]) == [1.0, 1.0, 1.0]
+    assert normalize_data([7, 7, 7, 7]) == [0.0, 0.0, 0.0, 0.0]
+    assert normalize_data([0, 0, 0]) == [0.0, 0.0, 0.0]
+    assert normalize_data([-5, -5, -5]) == [0.0, 0.0, 0.0]
 
 def test_normalize_data_positive_numbers():
     """Тест положительных чисел"""
@@ -42,8 +44,8 @@ def test_normalize_data_positive_numbers():
 
 def test_calculate_normalized_sum_identical():
     """Тест суммы для одинаковых значений"""
-    assert calculate_normalized_sum([7, 7, 7]) == 3.0
-    assert calculate_normalized_sum([0, 0, 0, 0]) == 4.0
+    assert calculate_normalized_sum([7, 7, 7]) == 0.0
+    assert calculate_normalized_sum([0, 0, 0, 0]) == 0.0
 
 def test_calculate_normalized_sum_linear():
     """Тест суммы для линейной последовательности"""

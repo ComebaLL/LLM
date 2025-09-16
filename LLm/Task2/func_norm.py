@@ -1,7 +1,9 @@
 ___author___ = "Kuvykin N.D"
 
+import numpy as np
 
-def normalize_data(data: list[float]) -> list[float]:
+#todo переделать на ndarray
+def normalize_data(data) -> np.ndarray:
     """
     Нормализует данные по формуле: (x - min) / (max - min)
     Возвращает список нормализованных значений.
@@ -9,19 +11,19 @@ def normalize_data(data: list[float]) -> list[float]:
     if not data:
         return []
     
-    min_val = min(data)
-    max_val = max(data)
+    min_val = np.min(data)
+    max_val = np.max(data)
     
-    # Если все значения одинаковые, возвращаем список из 1.0
+    # Если все значения одинаковые, возвращаем список из 0
     if max_val == min_val:
-        return [1.0] * len(data)
+        return (data * 0)
     
-    normalized = [(x - min_val) / (max_val - min_val) for x in data]
-    return normalized
+    # normalized = [(data - min_val) / np.ptp(data)]
+    return ((data - min_val) / np.ptp(data))
 
-def calculate_normalized_sum(data: list[float]) -> float:
+def calculate_normalized_sum(data) -> np.ndarray:
     """
     Вычисляет сумму нормализованных значений списка.
     """
     normalized_data = normalize_data(data)
-    return sum(normalized_data)
+    return (np.sum(normalized_data))

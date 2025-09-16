@@ -4,6 +4,8 @@ from collecl_creator import *
 from write_in_file import *
 from func_norm import *
 
+
+# todo сделать отчет скорости выполнения функций созжания массивов и почему так
 def main(*args, **kwargs):
     """
     Создать набор из случайных чисел бех повторов x1,x2,...,xn. 
@@ -26,9 +28,9 @@ def main(*args, **kwargs):
     set_cllection = unique_set_creator(n, a, b)
     ndarray_cllection = unique_ndarray_creator(n, a, b)
 
-    list_normal_sum = calculate_normalized_sum(list_cllection)
+    list_normal_sum = calculate_normalized_sum(ndarray_cllection)
 
-    print(list_normal_sum)
+    print(f"сумма значений массива после применения формулы нормализации {list_normal_sum:.4f}")
 
     write_to_csv("output", list_cllection=list_cllection)
 

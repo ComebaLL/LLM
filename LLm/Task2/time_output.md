@@ -5,3 +5,15 @@ Finished unique_ndarray_creator                             in 0.2023 seconds
 Finished unique_list_creator                                in 0.0038 seconds
 Finished unique_set_creator                                 in 0.0010 seconds
 Finished unique_ndarray_creator                             in 0.0144 seconds
+Finished unique_list_creator                                in 0.0252 seconds
+Finished unique_set_creator                                 in 0.0118 seconds
+Finished unique_ndarray_creator                             in 1.2009 seconds
+Finished unique_list_creator                                in 0.0142 seconds
+Finished unique_set_creator                                 in 0.0041 seconds
+Finished unique_ndarray_creator                             in 0.0466 seconds
+Finished unique_list_creator                                in 0.0137 seconds
+Finished unique_set_creator                                 in 0.0049 seconds
+Finished unique_ndarray_creator                             in 0.0464 seconds
+Finished unique_list_creator                                in 0.0142 seconds
+Finished unique_set_creator                                 in 0.0040 seconds
+Finished unique_ndarray_creator                             in 0.0433 seconds

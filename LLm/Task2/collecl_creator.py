@@ -30,7 +30,7 @@ def unique_list_creator(n: float, a: float, b: float) -> list:
     return result
 
 @time_dec
-def unique_set_creator(n: float, a: float, b: float) -> list:
+def unique_set_creator(n: float, a: float, b: float) -> set:
     """
     Создать набор из случайных чисел бех повторов x1,x2,...,xn. 
     Интервал случайных значений (a,b) и кол-во случайных чисел
@@ -74,9 +74,13 @@ def unique_ndarray_creator(n: float, a: float, b: float) -> np.ndarray:
     result = []
 
     # Создаем все четные числа в интервале
-    start = a if a % 2 == 0 else a + 1
-    end = b if b % 2 == 0 else b - 1
-    all_even_numbers = np.arange(start, end + 1, 2)
+    # проверку размера от start до end чтобы размер был в "размуных" пределах
+    if (n <= 10**6):
+        start = a if a % 2 == 0 else a + 1
+        end = b if b % 2 == 0 else b - 1
+        all_even_numbers = np.arange(start, end + 1, 2)
+    else:
+        
 
     result = np.random.choice(all_even_numbers, size = n, replace = False)
 
