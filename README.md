@@ -71,6 +71,27 @@
     pip install -r requrenets_jupyter.txt
     ```
 
+Создание простого запроса FaspAPI
+
+    ```bash
+
+    from fastapi import FastAPI
+
+    app = FastAPI()
+
+    @app.get("/ping")
+    async def pong():
+        return {"status": "ok"}
+
+    ```
+
+    Команда для запуска
+
+    ```bash
+
+    uvicorn app.main:app --host 127.0.0.1 --port 8000 --reload
+
+    ```
 
 
 
